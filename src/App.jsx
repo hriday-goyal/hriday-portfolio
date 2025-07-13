@@ -7,9 +7,8 @@ export default function Portfolio() {
         <h1 className="text-4xl font-bold text-blue-600">Hriday Goyal</h1>
         <p className="text-lg">Aspiring Data Scientist | STEM Enthusiast | Class 11 Student</p>
         <div className="mt-4 flex justify-center gap-4">
-          <a href="https://github.com/hriday-goyal" target="_blank" className="text-blue-500 underline">GitHub</a>
-          <a href="https://linkedin.com/in/hridaygoyal" target="_blank" className="text-blue-500 underline">LinkedIn</a>
-          <a href="mailto:goyalhriday23@gmail.com" className="text-blue-500 underline">Email</a>
+        <a href="https://github.com/hriday-goyal" target="_blank" className="text-blue-500 underline">GitHub</a>
+        <a href="mailto:goyalhriday23@gmail.com" className="text-blue-500 underline">Email</a>
         </div>
       </header>
 
