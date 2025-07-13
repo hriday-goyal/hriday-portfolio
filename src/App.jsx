@@ -66,6 +66,28 @@ export default function Portfolio() {
           <li>Soft Skills: Public Speaking, Leadership, Time Management</li>
         </ul>
       </section>
+      
+      <section className="mb-10">
+      <h2 className="text-2xl font-semibold border-b pb-2 mb-4">📘 Blog</h2>
+      <div className="space-y-4">
+      <div>
+      <h3 className="text-xl font-bold">How I Built My AI-Powered Ozone Generator</h3>
+      <p>A behind-the-scenes look at combining hardware and ML to build a Streamlit-powered air purification app.</p>
+      <a href="#" className="text-blue-500 underline">Read more</a>
+      </div>
+      <div>
+      <h3 className="text-xl font-bold">Cricket Meets Code: Predicting Player Performance with Python</h3>
+      <p>Why I built a cricket performance predictor, and how I trained the ML model.</p>
+      <a href="#" className="text-blue-500 underline">Read more</a>
+      </div>
+      <div>
+      <h3 className="text-xl font-bold">My Research Journey: From Idea to Publication</h3>
+      <p>How I published my first research paper as a high school student.</p>
+      <a href="#" className="text-blue-500 underline">Read more</a>
+    </div>
+  </div>
+</section>
+
 
       <footer className="text-center text-sm text-gray-500">
         © 2025 Hriday Goyal. All rights reserved.
