@@ -6,7 +6,7 @@ export default function Portfolio() {
       <header className="mb-10 text-center">
         <h1 className="text-4xl font-bold text-blue-600">Hriday Goyal</h1>
         <p className="text-lg">Aspiring Data Scientist | STEM Enthusiast | Class 11 Student</p>
-        <div style={{ display: 'flex', justifyContent: 'center', gap: '1rem', marginTop: '1rem' }}>
+        <div style={{ display: 'flex', justifyContent: 'flex-start', gap: '1rem', marginTop: '1rem' }}>
         <a href="https://github.com/hriday-goyal" target="_blank" className="text-blue-500 underline">GitHub</a>
         <a href="mailto:goyalhriday23@gmail.com" className="text-blue-500 underline">Email</a>
        </div>
