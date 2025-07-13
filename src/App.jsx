@@ -21,12 +21,11 @@ export default function Portfolio() {
             <a href="https://ozone-ai-ml-ozoneapphriday.streamlit.app" target="_blank" className="text-blue-600 mt-2 block">Live Demo</a>
           </div>
 
-          <div className="bg-white p-4 rounded-xl shadow">
-            <h3 className="text-xl font-bold">Cricket Performance Predictor</h3>
-            <p className="mt-2">Predicts cricketer performance using regression techniques and match statistics. Built with scikit-learn and Streamlit.</p>
-            <a href="https://cricket-performance-predictor-mc4a2kbjp6a5xvjrml3tuc.streamlit.app" target="_blank" className="text-blue-600 mt-2 block">Live Demo</a>
-            <a href="https://github.com/hriday-goyal/cricket-performance-predictor" target="_blank" className="text-blue-600">GitHub Repo</a>
+        <div style={{ display: 'flex', gap: '1rem', marginTop: '0.5rem' }}>
+           <a href="https://cricket-performance-predictor-mc4a2kbjp6a5xvjrml3tuc.streamlit.app" target="_blank" className="text-blue-600 underline">Live Demo</a>
+           <a href="https://github.com/hriday-goyal/cricket-performance-predictor" target="_blank" className="text-blue-600 underline">GitHub Repo</a>
           </div>
+
 
           <div className="bg-white p-4 rounded-xl shadow">
             <h3 className="text-xl font-bold">Titanic Survival Predictor</h3>
