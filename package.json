@@ -1,5 +1,5 @@
 {
-  "name": "hriday-portfolio-blog",
+  "name": "hriday-portfolio",
   "version": "1.0.0",
   "private": true,
   "scripts": {
@@ -10,7 +10,9 @@
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^6.18.0"
+    "react-router-dom": "^6.18.0",
+    "react-markdown": "^9.0.0",
+    "remark-gfm": "^3.0.1"
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^4.0.0",
