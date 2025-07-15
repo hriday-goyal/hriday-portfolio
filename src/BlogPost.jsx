@@ -2,8 +2,9 @@ import React from 'react';
 import { useParams } from 'react-router-dom';
 
 const blogData = {
-  content: `
-
+  'ozone-generator': {
+    title: 'How I Built My AI-Powered Ozone Generator',
+    content: `
 ### 🌱 The Origin of an Idea
 
 Air pollution is one of the most pressing environmental challenges of our generation. Living in an urban environment, I have often seen the impact of poor air quality — from hazy skies to health warnings during peak pollution days. I began wondering: could machine learning help us understand and even improve air quality?
@@ -98,15 +99,18 @@ In future versions, I hope to:
 - Add a dashboard for long-term ozone tracking
 
 This project showed me how powerful technology can be when it’s made for real people. And it reminded me that meaningful innovation starts with asking, “What problem can I solve right now?”
+    `
+  },
 
-`,
+  // You can expand these later
   'cricket-performance': {
     title: 'Cricket Meets Code: Predicting Player Performance with Python',
-    content: 'I love cricket. I love ML. Here’s how I combined both into one project...'
+    content: 'Coming soon...'
   },
+
   'research-journey': {
     title: 'My Research Journey: From Idea to Publication',
-    content: 'Publishing a paper in high school was a dream. Here’s how I did it...'
+    content: 'Coming soon...'
   }
 };
 
@@ -119,9 +123,11 @@ export default function BlogPost() {
   }
 
   return (
-    <div className="p-6">
+    <div className="p-6 max-w-3xl mx-auto">
       <h1 className="text-3xl font-bold mb-4">{post.title}</h1>
-      <p className="text-lg">{post.content}</p>
+      <div className="text-lg whitespace-pre-line">
+        {post.content}
+      </div>
     </div>
   );
 }
