@@ -1,6 +1,7 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm'; // Enables tables, strikethroughs, etc.
 
 const blogData = {
   'ozone-generator': {
@@ -96,7 +97,9 @@ export default function BlogPost() {
   return (
     <div className="p-6 max-w-3xl mx-auto">
       <h1 className="text-3xl font-bold mb-4">{post.title}</h1>
-      <ReactMarkdown className="prose prose-lg">{post.content}</ReactMarkdown>
+      <ReactMarkdown remarkPlugins={[remarkGfm]} className="prose prose-lg">
+        {post.content}
+      </ReactMarkdown>
     </div>
   );
 }
