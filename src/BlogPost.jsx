@@ -1,5 +1,6 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
+import ReactMarkdown from 'react-markdown';
 
 const blogData = {
   'ozone-generator': {
@@ -29,40 +30,17 @@ To solve this, I used a combination of:
 - **Streamlit** for a lightweight, responsive user interface
 - **GitHub** for version control and code sharing
 
-I also structured this project in a way that it could eventually be paired with real sensor data from a physical ozone generator — something I hope to prototype next.
-
 ---
 
 ### 🧠 Building the Model
 
-I started by collecting and cleaning historical ozone datasets that included features like:
-- Temperature
-- Humidity
-- Wind Speed
-- Pressure
-- Particulate Matter (PM 2.5/PM10)
-
-I trained a **linear regression model** to predict ozone concentration based on these inputs. Once I had a reliable predictor, I added a **classification layer** — if the predicted output crossed a safety threshold, it flagged the air as unsafe.
-
-Here’s a basic summary of the architecture:
-
-1. Input features from environment (manual or sensor)
-2. Preprocessing and feature scaling
-3. Regression model predicts ozone output
-4. Classification model determines safety status
-5. Output is visualized in a simple dashboard
+I trained a **linear regression model** to predict ozone concentration using inputs like temperature, humidity, wind speed, and air pressure. After getting solid predictions, I used a **classification layer** to determine whether the output was safe for humans based on an ozone threshold.
 
 ---
 
 ### 🖥️ Making It Accessible with Streamlit
 
-I wanted my project to be more than code. I wanted **anyone** — even someone without technical skills — to use it.
-
-That’s why I built a frontend using **Streamlit**. The app takes user input (like temperature and humidity), runs the model behind the scenes, and displays:
-- Predicted ozone concentration
-- A clear label: ✅ Safe or ❌ Unsafe
-
-It’s hosted online so anyone can try it without installing anything.
+To make it simple for anyone to use, I built a clean frontend using Streamlit. It takes input data, predicts ozone concentration, and shows if it's ✅ Safe or ❌ Unsafe — all instantly.
 
 🔗 [Try the demo](https://ozone-ai-ml-ozoneapphriday.streamlit.app)
 
@@ -70,39 +48,32 @@ It’s hosted online so anyone can try it without installing anything.
 
 ### 📖 Getting Published
 
-What began as a weekend project evolved into something much more meaningful. I turned this into a research paper and submitted it to the **IRJMETS journal**, where it was successfully published.
-
-The experience taught me not just about coding and modeling, but about:
-- Structuring formal research
-- Referencing prior work
-- Writing in an academic tone
-- Preparing for peer review
+This project became the foundation of my first research paper, published in **IRJMETS journal**. I learned how to formally document, cite, and present machine learning research professionally — a major milestone for me as a high school student.
 
 ---
 
 ### 🚀 Challenges I Faced
 
-There were lots of bugs and dead ends:
-- Data wasn’t always clean or standardized
-- Early models gave wildly inaccurate predictions
-- Streamlit UI crashed under weird edge cases
+I faced multiple challenges:
+- Messy and inconsistent environmental datasets
+- Early models had poor accuracy
+- Building a Streamlit interface that worked for all users
 
-But every challenge taught me something — especially about debugging, patience, and the art of simplifying complex systems for non-tech users.
+Every obstacle taught me more about debugging, clarity, and the importance of designing tools for real people.
 
 ---
 
 ### 🌍 What’s Next?
 
-In future versions, I hope to:
-- Connect real-time IoT sensors for live data feeds
-- Improve accuracy with ensemble models or neural networks
-- Add a dashboard for long-term ozone tracking
+Future plans:
+- Connect to real-time sensor hardware
+- Use neural nets or ensemble models to boost accuracy
+- Add long-term ozone monitoring dashboards
 
-This project showed me how powerful technology can be when it’s made for real people. And it reminded me that meaningful innovation starts with asking, “What problem can I solve right now?”
+This project opened my eyes to how powerful code can be in solving urgent, real-world problems — especially environmental ones.
     `
   },
 
-  // You can expand these later
   'cricket-performance': {
     title: 'Cricket Meets Code: Predicting Player Performance with Python',
     content: 'Coming soon...'
@@ -125,9 +96,7 @@ export default function BlogPost() {
   return (
     <div className="p-6 max-w-3xl mx-auto">
       <h1 className="text-3xl font-bold mb-4">{post.title}</h1>
-      <div className="text-lg whitespace-pre-line">
-        {post.content}
-      </div>
+      <ReactMarkdown className="prose prose-lg">{post.content}</ReactMarkdown>
     </div>
   );
 }
