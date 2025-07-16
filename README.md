@@ -2,7 +2,7 @@
 
 This is my personal portfolio website, built using **React** and **Vite**, showcasing my projects, research, leadership, and technical skills.
 
-🔗 **Live Website**: [coming soon]
+🔗 **Live Website**: https://vercel.com/hriday-goyals-projects/hriday-portfolio
 
 ## 📁 Features
 
